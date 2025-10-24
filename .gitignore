@@ -6,7 +6,6 @@ CLAUDE.md
 site/
 
 # Data files
-*.csv
 *.jsonl
 
 # System files
