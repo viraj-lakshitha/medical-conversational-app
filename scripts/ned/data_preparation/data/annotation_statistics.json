@@ -1,0 +1,17 @@
+{
+  "annotated_texts": 19613,
+  "total_entities": {
+    "diseases": 71491,
+    "symptoms": 270658,
+    "pairs": 10203
+  },
+  "entity_densities": {
+    "diseases_per_text": 3.6450823433437005,
+    "symptoms_per_text": 13.799928618773263,
+    "pairs_per_text": 0.5202161831438332
+  },
+  "knowledge_base_entities": {
+    "total_diseases": 8379,
+    "total_symptoms": 16380
+  }
+}

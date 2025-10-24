@@ -1,0 +1,400 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #141414;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #141414;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-toggle button {
+  background: none;
+  border: none;
+  color: #1890ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.chat-layout {
+  display: flex;
+  height: 100vh;
+  background: #141414;
+}
+
+.chat-sidebar {
+  width: 300px;
+  background: #1f1f1f;
+  border-right: 1px solid #303030;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #303030;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.conversation-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #303030;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #fff;
+}
+
+.conversation-item:hover {
+  background: #262626;
+}
+
+.conversation-item.active {
+  background: #1890ff;
+}
+
+.conversation-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 1rem;
+  background: #1f1f1f;
+  border-bottom: 1px solid #303030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chat-feed {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #141414;
+}
+
+.message {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.user {
+  align-items: flex-end;
+}
+
+.message.bot {
+  align-items: flex-start;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.25rem;
+}
+
+.message.user .message-content {
+  background: #1890ff;
+  color: #fff;
+}
+
+.message.bot .message-content {
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #303030;
+}
+
+.message-timestamp {
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  margin: 0 0.5rem;
+}
+
+.chat-input {
+  padding: 1rem;
+  background: #1f1f1f;
+  border-top: 1px solid #303030;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-wrapper .ant-input {
+  flex: 1;
+}
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8c8c8c;
+  font-style: italic;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* Medical-specific message styling */
+.message.bot .message-content {
+  line-height: 1.6;
+}
+
+.message.bot .message-content h4,
+.message.bot .message-content strong {
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.message.bot .message-content ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.message.bot .message-content li {
+  margin-bottom: 4px;
+}
+
+/* Medical insights styling */
+.medical-insights-container {
+  padding: 16px;
+}
+
+.insights-card {
+  margin-bottom: 16px;
+  background: #1f1f1f;
+  border: 1px solid #303030;
+}
+
+.insights-card .ant-card-head {
+  background: #262626;
+  border-bottom: 1px solid #303030;
+}
+
+.insights-card .ant-card-head-title {
+  color: #fff;
+}
+
+.insights-card .ant-card-body {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+/* Analytics dashboard styling */
+.analytics-dashboard {
+  background: #141414;
+  min-height: 100vh;
+}
+
+.analytics-dashboard .ant-card {
+  background: #1f1f1f;
+  border: 1px solid #303030;
+  margin-bottom: 16px;
+}
+
+.analytics-dashboard .ant-card-head {
+  background: #262626;
+  border-bottom: 1px solid #303030;
+}
+
+.analytics-dashboard .ant-card-head-title {
+  color: #fff;
+}
+
+.analytics-dashboard .ant-card-body {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.analytics-dashboard .ant-statistic-title {
+  color: #8c8c8c;
+}
+
+.analytics-dashboard .ant-statistic-content {
+  color: #fff;
+}
+
+/* Drawer customization */
+.ant-drawer-content {
+  background: #141414;
+}
+
+.ant-drawer-header {
+  background: #1f1f1f;
+  border-bottom: 1px solid #303030;
+}
+
+.ant-drawer-title {
+  color: #fff;
+}
+
+.ant-drawer-close {
+  color: #fff;
+}
+
+.ant-drawer-body {
+  background: #141414;
+  color: #fff;
+}
+
+/* Tag customization for medical entities */
+.medical-entity-tag {
+  margin: 2px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.medical-entity-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Alert customization */
+.ant-alert-warning {
+  background: rgba(250, 173, 20, 0.1);
+  border: 1px solid rgba(250, 173, 20, 0.3);
+}
+
+.ant-alert-warning .ant-alert-message,
+.ant-alert-warning .ant-alert-description {
+  color: #faad14;
+}
+
+.ant-alert-error {
+  background: rgba(255, 77, 79, 0.1);
+  border: 1px solid rgba(255, 77, 79, 0.3);
+}
+
+.ant-alert-error .ant-alert-message,
+.ant-alert-error .ant-alert-description {
+  color: #ff4d4f;
+}
+
+.ant-alert-success {
+  background: rgba(82, 196, 26, 0.1);
+  border: 1px solid rgba(82, 196, 26, 0.3);
+}
+
+.ant-alert-success .ant-alert-message,
+.ant-alert-success .ant-alert-description {
+  color: #52c41a;
+}
+
+/* Table customization for dark theme */
+.ant-table {
+  background: #1f1f1f;
+}
+
+.ant-table-thead > tr > th {
+  background: #262626;
+  color: #fff;
+  border-bottom: 1px solid #303030;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #303030;
+  color: #fff;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #262626;
+}
+
+/* Progress bar customization */
+.ant-progress-text {
+  color: #fff !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chat-layout {
+    flex-direction: column;
+  }
+
+  .chat-sidebar {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #303030;
+  }
+
+  .message-content {
+    max-width: 90%;
+  }
+}

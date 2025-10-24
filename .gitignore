@@ -1,0 +1,41 @@
+**/**/__pycache__/**
+
+CLAUDE.md
+
+.site/**
+site/
+
+# Data files
+*.csv
+*.jsonl
+
+# System files
+.DS_Store
+*/.DS_Store
+
+# Local settings
+.claude/settings.local.json
+
+# Test and demo files
+**/test_*.py
+**/demo_*.py
+**/*_demo.py
+
+# Backup files
+backups/
+*.backup
+*.dump
+
+# Model files
+*.pth
+*.pkl
+models/
+checkpoints/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+/*.md
+!README.md
