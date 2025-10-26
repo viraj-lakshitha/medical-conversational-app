@@ -38,3 +38,6 @@ tmp/
 
 /*.md
 !README.md
+
+/*.txt
+!requirements.txt
